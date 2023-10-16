@@ -32,13 +32,13 @@
 <body>
     <div class="container">
         <h1>
-            Real-time Audio Transcription
+            Chat Application
         </h1>
-        <p class="small-caps">
+        <p class="small-caps" hidden="true">
             Using the <a href="https://aws.amazon.com/transcribe/">Amazon Transcribe</a> WebSocket API
         </p>
         <hr/>
-        <p>
+        <p hidden="true">
             Create an <a href="https://aws.amazon.com/free/">AWS Account</a>, attach the necessary <a
                 href="policy.json"> IAM policy</a>, and enter your Access Id and Secret Key below.
         </p>
@@ -55,7 +55,7 @@
                 <label>Session Token (if using MFA):</label>
                 <input type="password" id="session_token" placeholder="SESSION TOKEN" value="" />
             </div>
-            <div class="col">
+            <div class="col" hidden="true">
                 <label>Language: </label>
                 <select id="language">
                     <optgroup label="English">
@@ -90,12 +90,18 @@
                 <button id="start-button" class="block" title="Start Transcription">
                     <i class="fa fa-microphone"></i> Start Speaking
                 </button>
+            </div>
+            <br><br>
+            <div class="col">
                 <button id="stop-button" class="block" title="Stop Transcription" disabled="true"><i
                         class="fa fa-stop-circle"></i> Stop Speaking
                 </button>
+            </div>
+            <br><br>
+            <div class="col">
                 <button id="responsePlay" class="block" disabled="true">Hear Response</button>
             </div>
-            <div class="col">
+            <div class="col" hidden="true">
                 <a class="float-right" href="https://aws.amazon.com/free/" aria-label="Amazon Web Services">
                     <img id="logo" src="AWS_logo_RGB.png" alt="AWS Logo" />
                 </a>
